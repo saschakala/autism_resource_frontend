@@ -7,7 +7,8 @@ const JumboTron = () => {
         <Jumbotron align = "center">
             <Container>
             <h1 align="center">Autism Resource Compendium</h1>
-            <p>
+            <br></br>
+            <p style={{fontWeight: 'bold', fontSize: '1.2em'}}>
                 This site is a collection of resources compiled by autists for autists (or those in search of answers). 
             </p>
             
