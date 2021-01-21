@@ -16,12 +16,10 @@ componentDidMount() {
 
   render() {
     return (
-      <Container>
         <div className="App">
           <JumboTron />
           <SourceThumbnails />
         </div>
-      </Container>
     );
   }
 }
