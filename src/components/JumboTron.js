@@ -4,12 +4,15 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 
 const JumboTron = () => {
     return (
-        <Jumbotron>
+        <Jumbotron align = "center">
             <Container>
-            <h1>Hello, world!</h1>
+            <h1 align="center">Autism Resource Compendium</h1>
             <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
+                This site is a collection of resources compiled by autists for autists (or those in search of answers). 
+            </p>
+            
+            <p>
+                This collection focuses on resources that aren't centered on the cis-male experience.
             </p>
             </Container>
         </Jumbotron>
