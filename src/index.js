@@ -5,8 +5,9 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
-
 import { createStore, applyMiddleware } from 'redux';
+
+// allows us to replace window.__Redux_devtools
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -19,7 +20,9 @@ let store = createStore(
 )
 
 ReactDOM.render(
-  <Provider store={store}>
-      <App />
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+        <App />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root'));
