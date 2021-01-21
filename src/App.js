@@ -1,5 +1,8 @@
 import React from 'react';
+
 import JumboTron from './components/JumboTron'
+import SourceThumbnails from './components/SourceThumbnails'
+
 import Container from 'react-bootstrap/Container';
 
 
@@ -14,9 +17,10 @@ componentDidMount() {
   render() {
     return (
       <Container>
-      <div className="App">
-        <JumboTron/>
-      </div>
+        <div className="App">
+          <JumboTron />
+          <SourceThumbnails />
+        </div>
       </Container>
     );
   }
