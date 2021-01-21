@@ -1,5 +1,6 @@
 import React from 'react';
 import JumboTron from './components/JumboTron'
+import Container from 'react-bootstrap/Container';
 
 
 class App extends React.Component {
@@ -12,9 +13,11 @@ componentDidMount() {
 
   render() {
     return (
+      <Container>
       <div className="App">
         <JumboTron/>
       </div>
+      </Container>
     );
   }
 }
