@@ -8,28 +8,25 @@ import CardDeck from 'react-bootstrap/CardDeck';
 const SourceThumbnails = () => {
     return (
         <Container align="center">
-            <CardDeck>
-                <Card>
-                    <Card.Img variant="top" />
-                    <Card.Body>
-                        <Card.Title>Books</Card.Title>
-                    </Card.Body>
-                </Card>
 
-                <Card>
-                    <Card.Img variant="top" />
-                    <Card.Body>
-                        <Card.Title>Articles</Card.Title>
-                    </Card.Body>
-                </Card>
+                <Row style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    justifyContent: 'space-around'
+                }}>
+                    <Col class="col-md" style={{margin: '3rem'}}>
+                    test
+                    </Col>
 
-                <Card>
-                    <Card.Img variant="top" />
-                    <Card.Body>
-                        <Card.Title>Social Media Accounts</Card.Title>
-                    </Card.Body>
-                </Card>
-            </CardDeck>
+                    <Col class="col-md" style={{margin: '3rem'}}>
+                    test
+                    </Col>
+
+                    <Col class="col-md" style={{margin: '3rem'}}>
+                    test
+                    </Col>
+                </Row>
+
         </Container>
 
     )
