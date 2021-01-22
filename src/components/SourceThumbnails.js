@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image'
 
 const SourceThumbnails = () => {
     return (
@@ -16,15 +18,15 @@ const SourceThumbnails = () => {
                     }}>
                         
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                    <Button variant="primary" size="lg">Books</Button>
                     </Col>
 
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                    <Button variant="primary">Articles</Button>
                     </Col>
 
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                    <Button variant="primary">Social Media Accounts</Button>
                     </Col>
                 </Row>
 
@@ -35,17 +37,47 @@ const SourceThumbnails = () => {
                     }}>
                         
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>
+                                    Books
+                                </Card.Title>
+                            </Card.Body>
+                        </Card>
                     </Col>
 
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>
+                                    Books
+                                </Card.Title>
+                            </Card.Body>
+                        </Card>
                     </Col>
 
                     <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    test
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>
+                                    Books
+                                </Card.Title>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
+
+                <Row>
+    <Col xs={6} md={4}>
+      <Image src="holder.js/171x180" rounded />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="holder.js/171x180" roundedCircle />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="holder.js/171x180" thumbnail />
+    </Col>
+  </Row>
 
         </Container>
 
