@@ -10,19 +10,39 @@ const SourceThumbnails = () => {
         <Container align="center">
 
                 <Row style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'space-around'
-                }}>
-                    <Col class="col-md" style={{margin: '3rem'}}>
+                        flex: 1,
+                        flexDirection: 'row',
+                        justifyContent: 'space-around'
+                    }}>
+                        
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
                     test
                     </Col>
 
-                    <Col class="col-md" style={{margin: '3rem'}}>
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
                     test
                     </Col>
 
-                    <Col class="col-md" style={{margin: '3rem'}}>
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
+                    test
+                    </Col>
+                </Row>
+
+                <Row style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                        justifyContent: 'space-around'
+                    }}>
+                        
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
+                    test
+                    </Col>
+
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
+                    test
+                    </Col>
+
+                    <Col class="col-sm-2" style={{margin: '3rem'}}>
                     test
                     </Col>
                 </Row>
@@ -34,8 +54,3 @@ const SourceThumbnails = () => {
 
 export default SourceThumbnails
 
-// <Row>
-// <Col>1 of 3</Col>
-// <Col>2 of 3</Col>
-// <Col>3 of 3</Col>
-// </Row>
