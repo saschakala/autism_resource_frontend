@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './App.scss';
 
 // allows for use of  basic bootstrap stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
