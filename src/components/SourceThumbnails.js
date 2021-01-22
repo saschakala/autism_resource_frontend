@@ -6,80 +6,68 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
+import CardColumns from 'react-bootstrap/CardColumns';
 
 const SourceThumbnails = () => {
     return (
         <Container align="center">
 
-                <Row style={{
-                        flex: 1,
-                        flexDirection: 'row',
-                        justifyContent: 'space-around'
-                    }}>
-                        
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    <Button variant="primary" size="lg">Books</Button>
-                    </Col>
+            <CardColumns>
+                <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Books</Card.Title>
+                        </Card.Body>
+                    </Card>
 
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    <Button variant="primary">Articles</Button>
-                    </Col>
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Articles</Card.Title>
+                        </Card.Body>
+                    </Card>
 
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                    <Button variant="primary">Social Media Accounts</Button>
-                    </Col>
-                </Row>
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Social Media Accounts</Card.Title>
+                        </Card.Body>
+                    </Card>
+                </CardColumns>
 
-                <Row style={{
-                        flex: 1,
-                        flexDirection: 'row',
-                        justifyContent: 'space-around'
-                    }}>
-                        
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                        <Card>
-                            <Card.Body>
-                                <Card.Title>
-                                    Books
-                                </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                <CardColumns>
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Multimedia</Card.Title>
+                        </Card.Body>
+                    </Card>
 
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                        <Card>
-                            <Card.Body>
-                                <Card.Title>
-                                    Books
-                                </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Miscellaneous</Card.Title>
+                        </Card.Body>
+                    </Card>
 
-                    <Col class="col-sm-2" style={{margin: '3rem'}}>
-                        <Card>
-                            <Card.Body>
-                                <Card.Title>
-                                    Books
-                                </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>Queer</Card.Title>
+                        </Card.Body>
+                    </Card>
+                </CardColumns>
 
-                <Row>
-    <Col xs={6} md={4}>
-      <Image src="holder.js/171x180" rounded />
-    </Col>
-    <Col xs={6} md={4}>
-      <Image src="holder.js/171x180" roundedCircle />
-    </Col>
-    <Col xs={6} md={4}>
-      <Image src="holder.js/171x180" thumbnail />
-    </Col>
-  </Row>
+               
+                    <Card>
+                        <Card.Img variant="top" />
+                        <Card.Body>
+                            <Card.Title>By Autists</Card.Title>
+                        </Card.Body>
+                    </Card>
+              
 
-        </Container>
+            </Container>
 
     )
 }
