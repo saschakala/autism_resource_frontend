@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchBooks} from '../actions/fetchBooks'
+import {fetchSources} from '../actions/fetchSources'
 
 import JumboTron from './components/JumboTron'
 import SourceThumbnails from './components/SourceThumbnails'
@@ -23,5 +23,11 @@ componentDidMount() {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    sources: state.sources
+  }
+}
 
-export default App;
+
+export default (mapStateToProps, {fe}) App;
