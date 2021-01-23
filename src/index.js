@@ -12,11 +12,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import sourceReducer from './reducers/sourceReducer';
+import bookReducer from './reducers/bookReducer';
 
 
 let store = createStore(
-  sourceReducer, 
+  bookReducer, 
   composeWithDevTools(applyMiddleware(thunk))
 )
 
