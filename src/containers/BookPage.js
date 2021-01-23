@@ -1,9 +1,10 @@
 import React from 'react';
 import BookCards from '../components/BookCards';
 
-class BooksContainer extends React.Component {
+class BookPage extends React.Component {
   
     render() {
+        
         return (
             <div>
                 <BookCards books={this.props.books}/>
@@ -13,4 +14,4 @@ class BooksContainer extends React.Component {
   }
   
   
-  export default BooksContainer
+  export default BookPage
