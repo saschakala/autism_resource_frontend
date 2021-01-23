@@ -5,7 +5,6 @@ import {fetchBooks} from '../actions/fetchBooks';
 import JumboTron from '../components/JumboTron';
 import SourceThumbnails from '../components/SourceThumbnails';
 import TestComponent from '../components/TestComponent';
-import Router from '../components/Router'
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
