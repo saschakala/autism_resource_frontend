@@ -1,12 +1,18 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {fetchBooks} from '../actions/fetchBooks'
+import {connect} from 'react-redux';
+import {fetchBooks} from '../actions/fetchBooks';
 
-import JumboTron from '../components/JumboTron'
-import SourceThumbnails from '../components/SourceThumbnails'
-import TestComponent from '../components/TestComponent'
+import JumboTron from '../components/JumboTron';
+import SourceThumbnails from '../components/SourceThumbnails';
+import TestComponent from '../components/TestComponent';
 
-import BookContainer from './BookContainer'
+import BookPage from './BookPage';
+import HomePage from './HomePage';
+
+import { Switch, Route } from 'react-router-dom'
+
+
+
 
 
 class App extends React.Component {
@@ -18,10 +24,11 @@ componentDidMount() {
   render() {
     return (
         <div className="App">
-          <JumboTron />
-          {/* <SourceThumbnails /> */}
-          <BookContainer books={this.props.books}/>
-          {/* <TestComponent books={this.props.books}/> */}
+          <Switch>
+            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
+            <Route exact path="/" component = { HomePage }/>
+          </Switch>
+
         </div>
     );
   }
@@ -35,3 +42,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps, {fetchBooks})(App);
+
+
