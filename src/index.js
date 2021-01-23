@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './containers/App';
 import { createStore, applyMiddleware } from 'redux';
-import './index.css';
 
 // allows us to replace window.__Redux_devtools
 import { composeWithDevTools } from 'redux-devtools-extension';
