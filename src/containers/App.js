@@ -21,7 +21,7 @@ componentDidMount() {
           <JumboTron />
           {/* <SourceThumbnails /> */}
           <BookContainer books={this.props.books}/>
-          <TestComponent books={this.props.books}/>
+          {/* <TestComponent books={this.props.books}/> */}
         </div>
     );
   }
