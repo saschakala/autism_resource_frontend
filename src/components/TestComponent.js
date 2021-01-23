@@ -1,24 +1,26 @@
 import React from 'react';
-
+import Collapse from 'react-bootstrap/Collapse';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
-import Accordion from 'react-bootstrap/Accordion';
-import Collapse from 'react-bootstrap/Collapse'
 
+class TestComponent extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			open: false,
+		};
+	}
 
-
-
-const BookCards = (props) => {
-
-    return (
-        // iterating through all the books resources and displaying them on individual cards
-        <Container> 
+	render() {
+		const { open } = this.state;
+		return (
+            
+            <Container> 
 
             <CardColumns> 
-            {props.books && props.books.map(book =>
+            {this.props.books && this.props.books.map(book =>
                 <Card key={book.id}>
                 
 
@@ -30,19 +32,29 @@ const BookCards = (props) => {
                           )}
                     </Card.Body>
 
+                <Collapse in={this.state.open}>
+				    <div id={book.id}>
                     <Card.Body>
                         <Card.Text>{book.attributes.description}</Card.Text>
                     </Card.Body>
 
+                    </div>
+				</Collapse>
+
                     
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button key={book.id}
+					onClick={() => this.setState({ open: !open })}
+					aria-controls={book.id}
+					aria-expanded={open}>Description</Button>
+
                 </Card>
             )}
             </CardColumns>
 
+
         </Container>
-        
-    )
+		);
+	}
 }
 
-export default BookCards
+export default TestComponent
