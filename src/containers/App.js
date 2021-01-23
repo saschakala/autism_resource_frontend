@@ -4,6 +4,7 @@ import {fetchBooks} from '../actions/fetchBooks'
 
 import JumboTron from '../components/JumboTron'
 import SourceThumbnails from '../components/SourceThumbnails'
+import TestComponent from '../components/TestComponent'
 
 import BookContainer from './BookContainer'
 
@@ -20,6 +21,7 @@ componentDidMount() {
           <JumboTron />
           {/* <SourceThumbnails /> */}
           <BookContainer books={this.props.books}/>
+          {/* <TestComponent books={this.props.books}/> */}
         </div>
     );
   }
