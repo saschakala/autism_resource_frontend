@@ -2,14 +2,15 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import history from '../history';
+import { useHistory } from "react-router-dom";
 
 const SourceThumbnails = () => {
+    const history = useHistory();
     return (
         <Container align="center"  style={{marginBottom:'3rem'}}>
 
             <CardColumns >
-                <Card id="books" onClick={() => history.push('/ Books')}>
+                <Card id="books" onClick={() => history.push("/books", { from: "BookPage" })}>
                     <Card.Body>
                         <Card.Title>Books</Card.Title>
                     </Card.Body>
