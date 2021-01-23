@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchSources} from '../actions/fetchSources'
+import {fetchBooks} from '../actions/fetchBooks'
 
 import JumboTron from './components/JumboTron'
 import SourceThumbnails from './components/SourceThumbnails'
@@ -11,6 +11,7 @@ import Container from 'react-bootstrap/Container';
 class App extends React.Component {
 
 componentDidMount() {
+  this.props.fetchBooks()
 }
 
   render() {
@@ -25,9 +26,9 @@ componentDidMount() {
 
 const mapStateToProps = state => {
   return {
-    sources: state.sources
+    sources: state.books
   }
 }
 
 
-export default (mapStateToProps, {fe}) App;
+export default (mapStateToProps, {fetchBooks}) App;
