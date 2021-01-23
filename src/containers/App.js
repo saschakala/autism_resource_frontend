@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {fetchBooks} from '../actions/fetchBooks'
 
-import JumboTron from './components/JumboTron'
-import SourceThumbnails from './components/SourceThumbnails'
+import JumboTron from '../components/JumboTron'
+import SourceThumbnails from '../components/SourceThumbnails'
 
-import Container from 'react-bootstrap/Container';
+import BookContainer from './BookContainer'
 
 
 class App extends React.Component {
@@ -19,6 +19,7 @@ componentDidMount() {
         <div className="App">
           <JumboTron />
           {/* <SourceThumbnails /> */}
+          <BookContainer books={this.props.books}/>
         </div>
     );
   }
@@ -26,9 +27,9 @@ componentDidMount() {
 
 const mapStateToProps = state => {
   return {
-    sources: state.books
+    books: state.books
   }
 }
 
 
-export default (mapStateToProps, {fetchBooks}) App;
+export default connect(mapStateToProps, {fetchBooks})(App);
