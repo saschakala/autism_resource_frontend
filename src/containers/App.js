@@ -14,6 +14,8 @@ import { Switch, Route } from 'react-router-dom'
 
 
 
+
+
 class App extends React.Component {
 
 componentDidMount() {
@@ -23,11 +25,11 @@ componentDidMount() {
   render() {
     return (
         <div className="App">
-            <Switch>
-              {/* in most specific to less specific */}
-              <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
-              <Route exact path="/" component = { HomePage }/>
+          <Switch>
+            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
+            <Route exact path="/" component = { HomePage }/>
           </Switch>
+
         </div>
     );
   }
@@ -41,3 +43,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps, {fetchBooks})(App);
+
+
