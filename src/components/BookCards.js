@@ -15,9 +15,12 @@ const BookCards = (props) => {
             {props.books && props.books.map(book =>
                 <Card key={book.id}>
                     <Card.Body>
-                        <Card.Text></Card.Text>
                     <Card.Img variant="top" src={book.attributes.img_url} />
                         <Card.Title>{book.attributes.title}</Card.Title>
+                        {book.attributes.creators.map(creator =>
+                            <Card.Subtitle className="mb-2 text-muted">{creator.first_name} {creator.last_name}</Card.Subtitle>
+                          )}
+                        <Card.Text>{book.attributes.description}</Card.Text>
                     </Card.Body>
                 </Card>
             )}
