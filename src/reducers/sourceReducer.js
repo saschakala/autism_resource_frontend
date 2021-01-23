@@ -1,4 +1,10 @@
-export default function sourceReducer(state = {}, action ) {
+export default function sourceReducer(state = {sources: []}, action ) {
+    switch (action.type) {
+        case 'FETCH_SOURCES':
+            return {sources: action.payload}
 
-    return state
+    default:
+        return state
+
+    }
 }
