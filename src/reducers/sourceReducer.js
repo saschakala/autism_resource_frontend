@@ -1,6 +1,6 @@
 export default function sourceReducer(state = {sources: []}, action ) {
     switch (action.type) {
-        case 'FETCH_SOURCES':
+        case 'FETCH_BOOKS':
             return {sources: action.payload}
 
     default:
