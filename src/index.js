@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 // allows for use of  basic bootstrap stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from './App';
+import App from './containers/App';
 import { createStore, applyMiddleware } from 'redux';
 
 // allows us to replace window.__Redux_devtools
