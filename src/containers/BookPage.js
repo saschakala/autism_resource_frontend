@@ -1,7 +1,7 @@
 import React from 'react';
 import BookCards from '../components/BookCards';
 
-class BooksContainer extends React.Component {
+class BookPage extends React.Component {
   
     render() {
         return (
@@ -13,4 +13,4 @@ class BooksContainer extends React.Component {
   }
   
   
-  export default BooksContainer
+  export default BookPage
