@@ -4,7 +4,7 @@ export function fetchBooks() {
       .then(resp => resp.json())
       .then(books => dispatch({
         type: 'FETCH_BOOKS',
-        payload: books 
+        payload: books.data 
       }))
     }
   }
