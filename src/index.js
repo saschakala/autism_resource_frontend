@@ -5,18 +5,18 @@ import ReactDOM from 'react-dom';
 // allows for use of  basic bootstrap stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from './App';
+import App from './containers/App';
 import { createStore, applyMiddleware } from 'redux';
 
 // allows us to replace window.__Redux_devtools
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import sourceReducer from './reducers/sourceReducer';
+import bookReducer from './reducers/bookReducer';
 
 
 let store = createStore(
-  sourceReducer, 
+  bookReducer, 
   composeWithDevTools(applyMiddleware(thunk))
 )
 
