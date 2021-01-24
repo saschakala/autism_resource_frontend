@@ -2,23 +2,25 @@ import React from 'react';
 import { Container, Card, CardColumns } from 'react-bootstrap'
 
 const ArticleCards = (props) => {
+    const { articles } = props 
+ 
 
     return(
         <Container > 
 
         <CardColumns> 
-        {props.articles && props.articles.map(article =>
-            <Card key={article.id} style={{backgroundColor: '#ffffff', color:'#000000', margin: '3rem', cursor: 'default'}}>
+        {articles && articles.map(({ id, attributes: {img_url, title, creators, description, url}})  => 
+            <Card key={id} style={{backgroundColor: '#ffffff', color:'#000000', margin: '3rem', cursor: 'default'}}>
 
                 <Card.Body>
-                    <Card.Img variant="top" src={article.attributes.img_url} />
+                    <Card.Img variant="top" src={img_url} />
                     <br></br>
-                    <Card.Title>{article.attributes.title}</Card.Title>
-                    {article.attributes.creators.map(creator =>
-                        <Card.Subtitle className="mb-2 text-muted">{creator.first_name} {creator.last_name} ({creator.pronouns})</Card.Subtitle>
+                    <Card.Title>{title}</Card.Title>
+                    {creators.map(({first_name, last_name, pronouns}) =>
+                        <Card.Subtitle className="mb-2 text-muted">{first_name} {last_name} ({pronouns})</Card.Subtitle>
                       )}
-                    <Card.Text>{article.attributes.description}</Card.Text>
-                    <Card.Link href={article.attributes.url}>See Full Article</Card.Link>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Link href={url}>See Full Article</Card.Link>
                 </Card.Body>                    
             </Card>
         )}
