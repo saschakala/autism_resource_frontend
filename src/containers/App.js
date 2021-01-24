@@ -2,9 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
 
-import JumboTron from '../components/JumboTron';
-import SourceThumbnails from '../components/SourceThumbnails';
-import TestComponent from '../components/TestComponent';
+import NavBar from '../components/NavBar';
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
@@ -24,6 +22,8 @@ componentDidMount() {
   render() {
     return (
         <div className="App">
+          <NavBar/>
+          
           <Switch>
             <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
             <Route exact path="/" component = { HomePage }/>
