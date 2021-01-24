@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/sources.css';
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -20,7 +19,7 @@ const BookCards = (props) => {
 
             <CardColumns> 
             {props.books && props.books.map(book =>
-                <Card key={book.id}>
+                <Card key={book.id} style={{backgroundColor: '#ffffff', color:'#000000', margin: '3rem'}}>
                 
 
                     <Card.Body>

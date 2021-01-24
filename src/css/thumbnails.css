@@ -20,38 +20,11 @@
   border-width: 5px;
 }
 
-a, a:hover {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    opacity: 0.8;
-  }
-
-/* #books{
-    background-color: #FF84FD;
+.card-body{
+    font-size: 0.9em;
 }
 
-#articles{
-    background-color: #84FFEA;
+.card-img-top{
+  height: auto;
+  width: 60%;
 }
-
-#social-media-accounts{
-    background-color: #FFF784;
-}
-
-#multimedia{
-    background-color: #FED692;
-}
-
-#misc{
-    background-color: #84FFB1;
-}
-
-#queer{
-    background-color: #D092FE;
-}
-
-#autists{
-    background-color: #FEB592;
-} */
