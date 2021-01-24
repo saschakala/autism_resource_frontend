@@ -11,9 +11,6 @@ import HomePage from './HomePage';
 import { Switch, Route } from 'react-router-dom'
 
 
-
-
-
 class App extends React.Component {
 
 componentDidMount() {
@@ -39,7 +36,8 @@ componentDidMount() {
 
 const mapStateToProps = state => {
   return {
-    books: state.books
+    books: state.books,
+    articles: state.articles
   }
 }
 
