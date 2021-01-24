@@ -7,5 +7,4 @@ export function fetchArticles() {
         payload: data.data 
       }))
     }
-    debugger 
   }
