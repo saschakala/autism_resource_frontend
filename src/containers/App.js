@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
 
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
@@ -23,11 +24,13 @@ componentDidMount() {
     return (
         <div className="App">
           <NavBar/>
-          
+
           <Switch>
             <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
             <Route exact path="/" component = { HomePage }/>
           </Switch>
+
+          <Footer/>
 
         </div>
     );
