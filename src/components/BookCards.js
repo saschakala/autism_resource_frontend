@@ -31,12 +31,15 @@ const BookCards = (props) => {
                           )}
                     </Card.Body>
 
+                    
+
                     <Card.Body>
                         <Card.Text>{book.attributes.description}</Card.Text>
                     </Card.Body>
 
                     
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button href={book.attributes.url}>See More</Button>
+                
                 </Card>
             )}
             </CardColumns>
