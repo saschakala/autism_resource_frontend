@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
 
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import MainFooter from '../components/MainFooter';
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
@@ -30,7 +30,7 @@ componentDidMount() {
             <Route exact path="/" component = { HomePage }/>
           </Switch>
 
-          <Footer/>
+          <MainFooter/>
 
         </div>
     );
