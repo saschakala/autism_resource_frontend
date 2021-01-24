@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import { useHistory } from "react-router-dom";
-import '../css/thumbnails.css';
+import '../css/cards.css';
 
 const SourceThumbnails = () => {
     const history = useHistory();
