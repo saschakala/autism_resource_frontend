@@ -1,10 +1,9 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Container, Jumbotron } from 'react-bootstrap'
 
 const JumboTron = () => {
     return (
-        <Jumbotron align = "center">
+        <Jumbotron align = "center" style={{marginTop: '3rem', backgroundColor: '#86DEF0'}}>
             <Container>
             <h1 align="center">Autism Resource Compendium</h1>
             <br></br>

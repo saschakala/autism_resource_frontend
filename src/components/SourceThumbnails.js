@@ -1,9 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
+import { Container, Card, CardColumns } from 'react-bootstrap'
 import { useHistory } from "react-router-dom";
-import '../css/cards.css';
+import '../css/custom.css';
 
 const SourceThumbnails = () => {
     const history = useHistory();

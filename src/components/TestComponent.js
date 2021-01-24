@@ -1,9 +1,6 @@
 import React from 'react';
-import Collapse from 'react-bootstrap/Collapse';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
+import { Container, Collapse, Button, Card, CardColumns } from 'react-bootstrap'
+
 
 class TestComponent extends React.Component {
 	constructor(props) {
