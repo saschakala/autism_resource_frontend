@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const Copyright = () => {
     return(
-        <div class="main-footer">
+        <div className="main-footer">
             <Container align="center" fluid style={{textAlign: 'center'}}>
                 <Row align="center">
                     <Col>

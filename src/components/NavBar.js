@@ -8,7 +8,7 @@ const NavBar = () => {
         <Nav className="justify-content-end" >
             <Nav.Link href="http://localhost:3001/" id="nav-text" >Home</Nav.Link>
             <Nav.Link href="http://localhost:3001/books" id="nav-text" >Books</Nav.Link>
-            <Nav.Link href="http://localhost:3001" id="nav-text" >Articles</Nav.Link>
+            <Nav.Link href="http://localhost:3001/articles" id="nav-text" >Articles</Nav.Link>
             <Nav.Link href="http://localhost:3001" id="nav-text" >Social Media Accounts</Nav.Link>
         </Nav>
     </Navbar>
