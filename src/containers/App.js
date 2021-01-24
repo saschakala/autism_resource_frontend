@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchBooks} from '../actions/fetchBooks';
-// import {fetchArticles} from '../actions/fetchArticles';
+import {fetchSources} from '../actions/fetchSources';
 
 import NavBar from '../components/NavBar';
 import MainFooter from '../components/MainFooter';
@@ -16,7 +15,7 @@ import { Switch, Route } from 'react-router-dom'
 class App extends React.Component {
 
 componentDidMount() {
-  this.props.fetchBooks()
+  this.props.fetchSources()
 }
 
   render() {
@@ -25,8 +24,8 @@ componentDidMount() {
           <NavBar/>
 
           <Switch>
-            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
-            <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.props.articles}/>}/>
+            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.sources.filter(source => source.attributes.source_type === "Book")}/>}/>
+            <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.props.sources.filter(source => source.attributes.source_type === "Article")}/>}/>
             <Route exact path="/" component = { HomePage }/>
           </Switch>
 
@@ -37,14 +36,15 @@ componentDidMount() {
   }
 }
 
+
 const mapStateToProps = state => {
   return {
-    books: state.books,
-    articles: state.articles
+    sources: state.sources
   }
 }
 
 
-export default connect(mapStateToProps, {fetchBooks})(App);
+
+export default connect(mapStateToProps, {fetchSources})(App);
 
 
