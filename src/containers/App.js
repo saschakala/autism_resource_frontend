@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
-import {fetchArticles} from '../actions/fetchArticles';
+// import {fetchArticles} from '../actions/fetchArticles';
 
 import NavBar from '../components/NavBar';
 import MainFooter from '../components/MainFooter';
@@ -17,7 +17,6 @@ class App extends React.Component {
 
 componentDidMount() {
   this.props.fetchBooks()
-  this.props.fetchArticles()
 }
 
   render() {
@@ -46,6 +45,6 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, {fetchBooks, fetchArticles})(App);
+export default connect(mapStateToProps, {fetchBooks})(App);
 
 

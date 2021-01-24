@@ -7,7 +7,7 @@ const BookCards = (props) => {
 
     return (
         // iterating through all the books resources and displaying them on individual cards
-        <Container align="center"> 
+        <Container > 
 
             <CardColumns> 
             {props.books && props.books.map(book =>
