@@ -8,6 +8,7 @@ import MainFooter from '../components/MainFooter';
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
+import ArticlePage from './ArticlePage';
 
 import { Switch, Route } from 'react-router-dom'
 
