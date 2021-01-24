@@ -3,13 +3,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
-import Accordion from 'react-bootstrap/Accordion';
-import Collapse from 'react-bootstrap/Collapse'
-
-
-
 
 const BookCards = (props) => {
 
