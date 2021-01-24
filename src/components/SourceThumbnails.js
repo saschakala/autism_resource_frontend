@@ -15,7 +15,7 @@ const SourceThumbnails = () => {
                     </Card.Body>
                 </Card>
 
-                <Card id="articles">
+                <Card id="articles" onClick={() => history.push("/articles", { from: "ArticlePage" })}>
                     <Card.Body>
                         <Card.Title>Articles</Card.Title>
                     </Card.Body>
