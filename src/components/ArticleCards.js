@@ -18,7 +18,7 @@ const ArticleCards = (props) => {
                         <Card.Subtitle className="mb-2 text-muted">{creator.first_name} {creator.last_name} ({creator.pronouns})</Card.Subtitle>
                       )}
                     <Card.Text>{article.attributes.description}</Card.Text>
-                    <Card.Link href={article.attributes.url}>See More</Card.Link>
+                    <Card.Link href={article.attributes.url}>See Full Article</Card.Link>
                 </Card.Body>                    
             </Card>
         )}
