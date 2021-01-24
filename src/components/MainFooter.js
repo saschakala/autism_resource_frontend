@@ -5,14 +5,14 @@ import Copyright from './Copyright.js'
 
 const MainFooter = () => {
     return(
-        <div class="main-footer">
+        <div className="main-footer">
             <Container align="center" fluid >
 
                 <Row style={{backgroundColor: '#F3E98B', paddingTop: '1rem'}}>
                     <Col>
-                    <p class="footer-text-bold">About the Developer</p>
+                    <p className="footer-text-bold">About the Developer</p>
         
-                    <p class="footer-text">created by Sascha Kala</p>
+                    <p className="footer-text">created by Sascha Kala</p>
                     </Col>
                 </Row>
 
@@ -39,8 +39,8 @@ const MainFooter = () => {
 
                 <Row style={{backgroundColor: '#ECEAEC', padding: '1rem'}}>
                     <Col>
-                            <p class="footer-text-bold">Gratitude</p>
-                            <p class="footer-text" style={{fontStyle: 'italic'}}>A very special thank you to everyone that submitted resources and helped me to compile this database - I couldn't have done it without you.</p>
+                            <p className="footer-text-bold">Gratitude</p>
+                            <p className="footer-text" style={{fontStyle: 'italic'}}>A very special thank you to everyone that submitted resources and helped me to compile this database - I couldn't have done it without you.</p>
                     </Col>
                 </Row>
 
