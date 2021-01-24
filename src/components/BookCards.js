@@ -24,22 +24,15 @@ const BookCards = (props) => {
                 
 
                     <Card.Body>
-                    <Card.Img variant="top" src={book.attributes.img_url} />
+                        <Card.Img variant="top" src={book.attributes.img_url} />
+                        <br></br>
                         <Card.Title>{book.attributes.title}</Card.Title>
                         {book.attributes.creators.map(creator =>
                             <Card.Subtitle className="mb-2 text-muted">{creator.first_name} {creator.last_name}</Card.Subtitle>
                           )}
-                    </Card.Body>
-
-                    
-
-                    <Card.Body>
                         <Card.Text>{book.attributes.description}</Card.Text>
-                    </Card.Body>
-
-                    
-                    <Button href={book.attributes.url}>See More</Button>
-                
+                        <Card.Link href={book.attributes.url}>See More</Card.Link>
+                    </Card.Body>                    
                 </Card>
             )}
             </CardColumns>
