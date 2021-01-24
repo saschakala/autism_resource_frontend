@@ -14,11 +14,12 @@ import { Provider } from 'react-redux';
 // import { rootReducer } from './reducers/rootReducer';
 import {BrowserRouter as Router} from"react-router-dom";
 
-import bookReducer from './reducers/bookReducer'
+
+import sourceReducer from './reducers/sourceReducer';
 
 
 let store = createStore(
-  bookReducer, 
+  sourceReducer, 
   composeWithDevTools(applyMiddleware(thunk))
 )
 
