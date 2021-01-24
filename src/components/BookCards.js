@@ -7,12 +7,11 @@ const BookCards = (props) => {
 
     return (
         // iterating through all the books resources and displaying them on individual cards
-        <Container> 
+        <Container align="center"> 
 
             <CardColumns> 
             {props.books && props.books.map(book =>
                 <Card key={book.id} style={{backgroundColor: '#ffffff', color:'#000000', margin: '3rem', cursor: 'default'}}>
-                
 
                     <Card.Body>
                         <Card.Img variant="top" src={book.attributes.img_url} />
@@ -26,6 +25,7 @@ const BookCards = (props) => {
                     </Card.Body>                    
                 </Card>
             )}
+     
             </CardColumns>
 
         </Container>
