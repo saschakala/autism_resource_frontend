@@ -15,7 +15,7 @@
   text-decoration: none;
   background-color: #F86A4A;
   color: #49147A;
-  border-color: #08A5C5;
+  border-color: #E332CA;
   border-width: 5px;
 }
 
@@ -26,4 +26,8 @@
 .card-img-top{
   height: auto;
   width: 60%;
+}
+
+.navbar{
+  background-color: #B3F1D7;
 }
