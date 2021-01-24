@@ -31,3 +31,12 @@
 .navbar{
   background-color: #B3F1D7;
 }
+
+#copyright{
+  font-weight: bold;
+  font-size: 0.7em;
+  text-align: center;
+  padding-top: 2em;
+
+}
+
