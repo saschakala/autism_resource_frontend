@@ -1,23 +1,29 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchBooks} from '../actions/fetchBooks';
+import {fetchSources} from '../actions/fetchSources';
 
 import NavBar from '../components/NavBar';
 import MainFooter from '../components/MainFooter';
 
 import BookPage from './BookPage';
 import HomePage from './HomePage';
+import ArticlePage from './ArticlePage';
 
 import { Switch, Route } from 'react-router-dom'
 
 
-
-
-
 class App extends React.Component {
 
+books = () => {
+  return this.props.sources.filter(source => source.attributes.source_type === "Book")
+}
+
+articles = () => {
+  return this.props.sources.filter(source => source.attributes.source_type === "Article")
+}
+
 componentDidMount() {
-  this.props.fetchBooks()
+  this.props.fetchSources()
 }
 
   render() {
@@ -26,7 +32,8 @@ componentDidMount() {
           <NavBar/>
 
           <Switch>
-            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.books}/>}/>
+            <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.books()}/>}/>
+            <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.articles()}/>}/>
             <Route exact path="/" component = { HomePage }/>
           </Switch>
 
@@ -37,13 +44,17 @@ componentDidMount() {
   }
 }
 
+
+
+
 const mapStateToProps = state => {
   return {
-    books: state.books
+    sources: state.sources
   }
 }
 
 
-export default connect(mapStateToProps, {fetchBooks})(App);
+
+export default connect(mapStateToProps, {fetchSources})(App);
 
 
