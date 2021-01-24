@@ -2,25 +2,28 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import { useHistory } from "react-router-dom";
+import '../css/cards.css';
 
 const SourceThumbnails = () => {
+    const history = useHistory();
     return (
-        <Container align="center">
+        <Container align="center"  style={{marginBottom:'3rem'}}>
 
-            <CardColumns>
-                <Card>
+            <CardColumns >
+                <Card id="books" onClick={() => history.push("/books", { from: "BookPage" })}>
                     <Card.Body>
                         <Card.Title>Books</Card.Title>
                     </Card.Body>
                 </Card>
 
-                <Card>
+                <Card id="articles">
                     <Card.Body>
                         <Card.Title>Articles</Card.Title>
                     </Card.Body>
                 </Card>
 
-                <Card>
+                <Card id="social-media-accounts">
                     <Card.Body>
                         <Card.Title>Social Media Accounts</Card.Title>
                     </Card.Body>
@@ -28,19 +31,19 @@ const SourceThumbnails = () => {
             </CardColumns>
 
             <CardColumns>
-                <Card>
+                <Card id="multimedia">
                     <Card.Body>
                         <Card.Title>Multimedia</Card.Title>
                     </Card.Body>
                 </Card>
 
-                <Card>
+                <Card id="misc">
                     <Card.Body>
                         <Card.Title>Miscellaneous</Card.Title>
                     </Card.Body>
                 </Card>
 
-                <Card>
+                <Card id="queer">
                     <Card.Body>
                         <Card.Title>Queer</Card.Title>
                     </Card.Body>
@@ -48,7 +51,7 @@ const SourceThumbnails = () => {
             </CardColumns>
 
             
-                <Card>
+                <Card id="autists">
                     <Card.Body>
                         <Card.Title>By Autists</Card.Title>
                     </Card.Body>

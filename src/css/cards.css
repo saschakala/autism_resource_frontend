@@ -1,0 +1,29 @@
+.card{
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  cursor: pointer;
+  background-color: #49147A;
+  color: white;
+  border-radius: 5px;
+  border-color: #49147A;
+  border-width: 5px;
+}
+
+.card:hover{
+    transform: scale(1.0);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  text-decoration: none;
+  background-color: #F86A4A;
+  color: #49147A;
+  border-color: #08A5C5;
+  border-width: 5px;
+}
+
+.card-body{
+    font-size: 0.9em;
+}
+
+.card-img-top{
+  height: auto;
+  width: 60%;
+}
