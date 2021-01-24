@@ -17,11 +17,11 @@ const BookCards = (props) => {
                     <Card.Body>
                         <Card.Img variant="top" src={img_url} />
                         <br></br>
-                        <Card.Title>{title}</Card.Title>
+                        <Card.Title style={{marginTop: '1em'}}>{title}</Card.Title>
                         {creators.map(({first_name, last_name, pronouns}) =>
                             <Card.Subtitle className="mb-2 text-muted">{first_name} {last_name} ({pronouns})</Card.Subtitle>
                           )}
-                        <Card.Text>{description}</Card.Text>
+                        <Card.Text style={{marginTop: '1em'}}>{description}</Card.Text>
                         <Card.Link href={url}>See More</Card.Link>
                     </Card.Body>                    
                 </Card>
