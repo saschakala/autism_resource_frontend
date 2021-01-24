@@ -39,10 +39,20 @@
   padding-top: 2em;
 }
 
-.footer-text{
+.footer-text-bold{
   font-weight: bold;
   font-size: .9em;
-  text-align: left;
+  text-align: center;
+}
+
+.footer-text{
+  font-size: .9em;
+  text-align: center;
+}
+
+.footer-col{
+  padding-right: 4em;
+  margin-right: 2em;
 }
 
 @media (min-width: 576px) {
