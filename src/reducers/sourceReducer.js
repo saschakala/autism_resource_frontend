@@ -24,8 +24,6 @@ export default function sourceReducer(state = {sources: [], tags: [], feedback: 
         case 'ADD_FEEDBACK' :
             return{
                 ...state,
-                sources: [...state.sources],
-                tags: [...state.tags],
                 feedback: [...state.feedback, action.payload]
             }
         

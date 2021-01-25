@@ -18,20 +18,17 @@ state = {
 handleChange = (event) => {
     this.setState({
         [event.target.name]: event.target.value
-
     })
-    console.log(this.state)
     }
 
 handleSubmit = (event) => {
-    event.preventDefault()
+    // event.preventDefault()
     this.props.addFeedback(this.state)
     this.setState({
-        title: 'none',
+        title: '',
         feedback: '',
         name: ''
         })
-    console.log(this.state)
     }
 
 
