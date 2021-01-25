@@ -9,7 +9,7 @@ const NavBar = () => {
             <Nav.Link href="http://localhost:3001/" id="nav-text" >Home</Nav.Link>
             <Nav.Link href="http://localhost:3001/books" id="nav-text" >Books</Nav.Link>
             <Nav.Link href="http://localhost:3001/articles" id="nav-text" >Articles</Nav.Link>
-            <Nav.Link href="http://localhost:3001" id="nav-text" >Social Media Accounts</Nav.Link>
+            <Nav.Link href="http://localhost:3001/feedback" id="nav-text" >Feedback</Nav.Link>
         </Nav>
     </Navbar>
     )
