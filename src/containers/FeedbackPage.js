@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import FeedbackList from '../components/FeedbackList';
 import {fetchFeedback} from '../actions/fetchFeedback';
+import {addFeedback} from '../actions/addFeedback';
 
 
 class FeedbackPage extends React.Component {
@@ -17,7 +18,19 @@ state = {
 handleChange = (event) => {
     this.setState({
         [event.target.name]: event.target.value
+
     })
+    console.log(this.state)
+    }
+
+handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addFeedback(this.state)
+    this.setState({
+        title: 'none',
+        feedback: '',
+        name: ''
+        })
     console.log(this.state)
     }
 
@@ -40,7 +53,7 @@ componentDidMount() {
 
                     <Row>
                         <Col>
-                        <Form style={{paddingBottom: '2rem'}}>
+                        <Form onSubmit={this.handleSubmit} style={{paddingBottom: '2rem'}}>
                             <Form.Group controlId="feedbackTitle">
                                 <Form.Label>Title</Form.Label>
                                 <Form.Control type="text" placeholder="Your thoughts..." name="title" value={this.state.title} onChange={this.handleChange}/>
@@ -77,4 +90,4 @@ componentDidMount() {
   }
   
   
-  export default connect(mapStateToProps,{fetchFeedback})(FeedbackPage);
+  export default connect(mapStateToProps,{fetchFeedback, addFeedback})(FeedbackPage);
