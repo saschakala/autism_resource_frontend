@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 
-import bookReducer from './bookReducer';
-import articleReducer from './sourceReducer';
+import sourceReducer from './sourceReducer';
+import tagReducer from './tagReducer';
 
 
 export const rootReducer = combineReducers({
-    books: bookReducer,
-    articles: articleReducer
+    sources: sourceReducer,
+    tags: tagReducer
 })
