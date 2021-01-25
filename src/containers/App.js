@@ -9,6 +9,7 @@ import MainFooter from '../components/MainFooter';
 import BookPage from './BookPage';
 import HomePage from './HomePage';
 import ArticlePage from './ArticlePage';
+import FeedbackPage from './FeedbackPage';
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -37,6 +38,7 @@ articles = () => {
           <Switch>
             <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.books()} tags={this.props.tags}/>}/>
             <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.articles()}/>}/>
+            <Route exact path="/feedback" component = { FeedbackPage }/>
             <Route exact path="/" component = { HomePage }/>
           </Switch>
 
