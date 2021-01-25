@@ -17,5 +17,6 @@ export const addFeedback = (data) => {
           payload: data.data})
         }
       )
+      
     }
   }
