@@ -7,6 +7,21 @@ import {fetchFeedback} from '../actions/fetchFeedback';
 
 class FeedbackPage extends React.Component {
 
+state = {
+    title: '',
+    feedback: '',
+    name: ''
+    }
+
+
+handleChange = (event) => {
+    this.setState({
+        [event.target.name]: event.target.value
+    })
+    console.log(this.state)
+    }
+
+
 componentDidMount() {
     this.props.fetchFeedback()
     }
@@ -28,17 +43,17 @@ componentDidMount() {
                         <Form style={{paddingBottom: '2rem'}}>
                             <Form.Group controlId="feedbackTitle">
                                 <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="Your thoughts..." />
+                                <Form.Control type="text" placeholder="Your thoughts..." name="title" value={this.state.title} onChange={this.handleChange}/>
                             </Form.Group>
 
                             <Form.Group controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>Body</Form.Label>
-                                <Form.Control as="textarea" placeholder="...go here" />
+                                <Form.Control as="textarea" placeholder="...go here" name="feedback" value={this.state.feedback} onChange={this.handleChange}/>
                             </Form.Group>
 
                             <Form.Group controlId="feedbackName">
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" placeholder="Name" />
+                                <Form.Control type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/>
                             </Form.Group>
 
                             <Button variant="primary" type="submit">
