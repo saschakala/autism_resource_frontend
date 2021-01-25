@@ -14,7 +14,7 @@ class BookPage extends React.Component {
                         <h1>Books</h1>
                         </Col>
                         <Col>
-                            <BookFilter/>
+                            <BookFilter tags={this.props.tags}/>
                         </Col>
                     </Row>
                     <BookCards books={this.props.books}/>
