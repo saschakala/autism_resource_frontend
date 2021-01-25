@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchSources} from '../actions/fetchSources';
 import {fetchBookTags} from '../actions/fetchBookTags';
 
+
 import NavBar from '../components/NavBar';
 import MainFooter from '../components/MainFooter';
 
@@ -19,6 +20,7 @@ class App extends React.Component {
 componentDidMount() {
   this.props.fetchSources() 
   this.props.fetchBookTags()
+  
 }
 
 books = () => {
@@ -55,7 +57,7 @@ articles = () => {
 const mapStateToProps = state => {
   return {
     sources: state.sources[0],
-    tags: state.tags[0]
+    tags: state.tags[0],
   }
 }
 
