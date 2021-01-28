@@ -1,21 +1,21 @@
 import React from 'react';
 import { Container, Card, CardColumns } from 'react-bootstrap'
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import history from '../history';
 import '../css/custom.css';
 
 const SourceThumbnails = () => {
-    const history = useHistory();
     return (
         <Container align="center"  style={{marginBottom:'3rem'}}>
 
             <CardColumns >
-                <Card id="books" onClick={() => history.push("/books", { from: "BookPage" })}>
+                <Card id="books" onClick={() => history.push("/books")}>
                     <Card.Body>
                         <Card.Title>Books</Card.Title>
                     </Card.Body>
                 </Card>
 
-                <Card id="articles" onClick={() => history.push("/articles", { from: "ArticlePage" })}>
+                <Card id="articles" onClick={() => history.push("/articles")}>
                     <Card.Body>
                         <Card.Title>Articles</Card.Title>
                     </Card.Body>
