@@ -82,7 +82,7 @@ componentDidMount() {
 
   const mapStateToProps = state => {
     return {
-      feedback: state.feedback[0],
+      feedback: state.feedback,
     }
   }
   
