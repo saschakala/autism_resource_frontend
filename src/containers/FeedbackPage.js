@@ -21,7 +21,7 @@ handleChange = (event) => {
     }
 
 handleSubmit = (event) => {
-    // event.preventDefault()
+    event.preventDefault()
     this.props.addFeedback(this.state)
     this.setState({
         title: '',
