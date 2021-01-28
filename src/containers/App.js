@@ -19,7 +19,6 @@ class App extends React.Component {
 
 componentDidMount() {
   this.props.fetchSources() 
-  this.props.fetchBookTags()
 }
 
 // books = () => {
@@ -55,8 +54,7 @@ componentDidMount() {
 
 const mapStateToProps = state => {
   return {
-    sources: state.sources,
-    tags: state.tags,
+    sources: state.sources
   }
 }
 
@@ -64,6 +62,6 @@ const mapStateToProps = state => {
 
 
 
-export default connect(mapStateToProps, {fetchSources, fetchBookTags})(App);
+export default connect(mapStateToProps, {fetchSources})(App);
 
 

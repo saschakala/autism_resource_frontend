@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import FeedbackList from '../components/FeedbackList';
-import {fetchFeedback} from '../actions/fetchFeedback';
 import {addFeedback} from '../actions/addFeedback';
 
 
@@ -29,11 +28,6 @@ handleSubmit = (event) => {
         feedback: '',
         name: ''
         })
-    }
-
-
-componentDidMount() {
-    this.props.fetchFeedback()
     }
     
     render() {
@@ -87,4 +81,4 @@ componentDidMount() {
   }
   
   
-  export default connect(mapStateToProps,{fetchFeedback, addFeedback})(FeedbackPage);
+  export default connect(mapStateToProps,{addFeedback})(FeedbackPage);
