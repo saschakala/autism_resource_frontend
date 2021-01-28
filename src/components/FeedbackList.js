@@ -9,6 +9,7 @@ class FeedbackList extends React.Component {
 
 componentDidMount() {
     this.props.fetchFeedback()
+    console.log(this.props.feedback)
 }
     
     render() {
