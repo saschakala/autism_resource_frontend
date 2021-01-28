@@ -1,12 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Feedback from './Feedback.js'
+import Feedback from './Feedback.js';
+import {fetchFeedback} from '../actions/fetchFeedback';
 
-const FeedbackList = (props) => {
+
+
+class FeedbackList extends React.Component {
+
+componentDidMount() {
+    this.props.fetchFeedback()
+}
+    
+    render() {
   
     return( 
         <div className="feedback-list">
-            {props.feedback && props.feedback.map(
+            {this.props.feedback && this.props.feedback.map(
                 feedback => <Feedback key = {feedback.id} {...feedback}/>
             )
             }
@@ -14,11 +23,12 @@ const FeedbackList = (props) => {
 
     )
 }
+}
 
 const mapStateToProps = state => {
     return {
-      feedback: state.feedback[0],
+      feedback: state.feedback,
     }
   }
 
-  export default connect(mapStateToProps)(FeedbackList);
+  export default connect(mapStateToProps, {fetchFeedback})(FeedbackList);
