@@ -20,12 +20,13 @@
 }
 
 .card-body{
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 .card-img-top{
   height: auto;
-  width: 60%;
+  width: 50%;
+  margin-top: 1em;
 }
 
 .navbar{
