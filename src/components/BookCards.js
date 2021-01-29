@@ -15,8 +15,8 @@ const BookCards = (props) => {
                 <Card key={id} style={{backgroundColor: '#ffffff', color:'#000000', margin: '3rem', cursor: 'default'}}>
                       <Card.Body>
                       <Tabs defaultActiveKey={id} 
-                              id="book-card-tabs">
-                        <Tab eventKey={id} title="Overview">
+                              id="book-card-tabs" variant="pills">
+                        <Tab eventKey={id} title="Overview" >
                             <Card.Body >
                                 
                                 <Card.Img variant="top" src={img_url} />
@@ -33,7 +33,7 @@ const BookCards = (props) => {
 
                         <Tab eventKey={title} title="Description">
                             <Card.Body >
-                            <Card.Title style={{marginTop: '1em', fontStyle: 'italic'}}>{title}</Card.Title>
+                            <Card.Title style={{marginTop: '1em'}}>{title}</Card.Title>
                                 <Card.Text style={{marginTop: '1em'}}>{description}</Card.Text>
                             </Card.Body> 
                         </Tab>
