@@ -12,9 +12,8 @@ class HomePage extends Component {
     render() {
         return (
           <div>
-            {/* <JumboTron />
-            <SourceThumbnails /> */}
-            <TestTabs/>
+            <JumboTron />
+            <SourceThumbnails />
           </div>
         );
       }
