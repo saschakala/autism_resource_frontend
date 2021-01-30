@@ -11,7 +11,7 @@ class BookPage extends React.Component {
                 <Container >
                     <Row style={{marginTop: '3rem', padding: '1.3rem'}}>
                         <Col style={{backgroundColor: '#F86A4A', padding: '1.3rem'}}>
-                        <h1>Books Go Here</h1>
+                        <h1>Books</h1>
                         </Col>
                         <Col>
                             <BookFilter tags={this.props.tags}/>
