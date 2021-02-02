@@ -15,7 +15,7 @@ class BookFilter extends React.Component {
             
             <Form>
                 <Form.Group controlId="bookSelect">
-                    <Form.Label>Filter books by category</Form.Label>
+                    <Form.Label>Filter books</Form.Label>
                     <Form.Control as="select">
                     {this.props.tags.map(tag => tag.attributes).map(attribute => 
                         <option>{attribute.tag_name}</option>)}
