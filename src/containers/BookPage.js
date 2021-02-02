@@ -4,12 +4,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import BookFilter from './BookFilter';
 import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
+import {fetchBookTags} from '../actions/fetchBookTags';
 
 class BookPage extends React.Component {
 
 componentDidMount() {
     this.props.fetchBooks() 
-    // this.props.fetchBookTags()
+    this.props.fetchBookTags()
     }
   
     render() {
@@ -21,7 +22,7 @@ componentDidMount() {
                         <h1>Books</h1>
                         </Col>
                         <Col>
-                            {/* <BookFilter tags={this.props.tags}/> */}
+                            <BookFilter tags={this.props.book_tags}/>
                         </Col>
                     </Row>
                     <BookCards books={this.props.books}/>
@@ -33,8 +34,9 @@ componentDidMount() {
 const mapStateToProps = state => {
     return {
       books: state.books,
+      book_tags: state.book_tags
     }
   }
   
   
-  export default connect (mapStateToProps, {fetchBooks}) (BookPage)
+  export default connect (mapStateToProps, {fetchBooks, fetchBookTags}) (BookPage)

@@ -1,11 +1,11 @@
-export default function sourceReducer(state = {sources: [], books: [], tags: [], feedback: []}, action ) {
+export default function sourceReducer(state = {sources: [], books: [], book_tags: [], feedback: []}, action ) {
     switch (action.type) {
         case 'FETCH_SOURCES':
             return {...state, sources: action.payload};
         case 'FETCH_BOOKS' :
             return {...state, books: action.payload};
         case 'FETCH_BOOKTAGS':
-            return {...state, tags: action.payload};
+            return {...state, book_tags: action.payload};
         case 'FETCH_FEEDBACK':
             return {...state, feedback: action.payload};
         case 'ADD_FEEDBACK' :
