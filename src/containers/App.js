@@ -23,14 +23,6 @@ componentDidMount() {
   this.props.fetchBookTags()
 }
 
-// books = () => {
-//   return this.props.sources.filter(source => source.attributes.source_type === "Book")
-// }
-
-// articles = () => {
-//   return this.props.sources.filter(source => source.attributes.source_type === "Article")
-// }
-
 
   render() {
     return (
@@ -39,7 +31,7 @@ componentDidMount() {
 
           <Router history={history}>
             <Switch>
-              <Route path='/books' render={(routerProps) => <BookPage {...routerProps} books={this.props.sources && this.props.sources.filter(source => source.attributes.source_type === "Book")} tags={this.props.tags}/>}/>
+              <Route exact path='/books' component = { BookPage } />
               <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.props.sources &&this.props.sources.filter(source => source.attributes.source_type === "Article")}/>}/>
               <Route exact path="/feedback" component = { FeedbackPage }/>
               <Route exact path="/" component = { HomePage }/>
