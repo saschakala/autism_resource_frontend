@@ -27,6 +27,7 @@ handleChange = (event) => {
                 <Form.Group controlId="bookSelect">
                     <Form.Label>Filter books by category</Form.Label>
                     <Form.Control as="select" onChange={this.handleChange}name="tag">
+                    <option>all</option>
                     {this.props.tags.map(tag => tag.attributes).map(attribute => 
                         <option>{attribute.tag_name}</option>)}
                     </Form.Control>
