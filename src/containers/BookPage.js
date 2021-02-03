@@ -5,7 +5,6 @@ import BookFilter from './BookFilter';
 import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
 import {fetchBookTags} from '../actions/fetchBookTags';
-import {fetchBooksByTag} from '../actions/fetchBooksByTag';
 
 class BookPage extends React.Component {
 
@@ -57,4 +56,4 @@ const mapStateToProps = state => {
   }
   
   
-  export default connect (mapStateToProps, {fetchBooks, fetchBookTags, fetchBooksByTag}) (BookPage)
+  export default connect (mapStateToProps, {fetchBooks, fetchBookTags}) (BookPage)
