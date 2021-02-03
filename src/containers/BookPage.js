@@ -14,9 +14,9 @@ class BookPage extends React.Component {
     }
 
 
-    handleChange = (event) => {
-        this.props.fetchBooks(event.target.value)
-    }
+    // handleChange = (event) => {
+    //     this.props.fetchBooks(event.target.value)
+    // }
 
 
     render() {
@@ -29,16 +29,7 @@ class BookPage extends React.Component {
                         </Col>
                         <Col>
 
-                        <Form>
-                            <Form.Group controlId="bookSelect">
-                                <Form.Label>Filter books by category</Form.Label>
-                                <Form.Control as="select" onChange={this.handleChange}name="tag">
-                                <option>all</option>
-                                {this.props.book_tags.map(tag => tag.attributes).map(attribute => 
-                                    <option>{attribute.tag_name}</option>)}
-                                </Form.Control>
-                            </Form.Group>
-                        </Form>
+                            <BookFilter tags={this.props.book_tags}/>
 
                         </Col>
                     </Row>
