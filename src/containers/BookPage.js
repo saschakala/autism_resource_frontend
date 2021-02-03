@@ -1,6 +1,6 @@
 import React from 'react';
 import BookCards from '../components/BookCards';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import BookFilter from './BookFilter';
 import {connect} from 'react-redux';
 import {fetchBooks} from '../actions/fetchBooks';
@@ -8,11 +8,17 @@ import {fetchBookTags} from '../actions/fetchBookTags';
 
 class BookPage extends React.Component {
 
-componentDidMount() {
-    this.props.fetchBooks() 
-    this.props.fetchBookTags()
+    componentDidMount() {
+        this.props.fetchBooks() 
+        this.props.fetchBookTags()
     }
-  
+
+
+    // handleChange = (event) => {
+    //     this.props.fetchBooks(event.target.value)
+    // }
+
+
     render() {
         
         return (
@@ -22,7 +28,9 @@ componentDidMount() {
                         <h1>Books</h1>
                         </Col>
                         <Col>
+
                             <BookFilter tags={this.props.book_tags}/>
+
                         </Col>
                     </Row>
                     <BookCards books={this.props.books}/>

@@ -24,7 +24,7 @@ const BookCards = (props) => {
                                 <Card.Title style={{marginTop: '1em'}}>{title}</Card.Title>
                                 {creators.map(({first_name, last_name, pronouns}) =>
                                     <Card.Subtitle className="mb-2 text-muted">{first_name} {last_name}
-                                        <text style={{fontStyle: 'italic'}}>  ({pronouns})</text>
+                                        <p style={{fontStyle: 'italic'}}>  ({pronouns})</p>
                                     </Card.Subtitle>
                                 )}
                                 <Card.Link href={url} target="_blank">See on Goodreads</Card.Link>
@@ -43,7 +43,7 @@ const BookCards = (props) => {
                             <Card.Body> 
                                 <Card.Title>
                                     {title} {first_name} {last_name}
-                                    <text style={{fontSize: '0.8em', fontStyle: 'italic'}}>  ({pronouns})</text>
+                                    <p style={{fontSize: '0.8em', fontStyle: 'italic'}}>  ({pronouns})</p>
                                 </Card.Title>
 
                                 {autistic &&

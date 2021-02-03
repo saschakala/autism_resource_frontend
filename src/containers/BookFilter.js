@@ -1,20 +1,16 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import {connect} from 'react-redux';
+import {fetchBooks} from '../actions/fetchBooks';
 
 
 
 class BookFilter extends React.Component {
 
-state = {
-    tag: '',
-}
 
-handleChange = (event) => {
-    this.setState({
-        [event.target.name]: event.target.value
-    })
-}
+    handleChange = (event) => {
+        this.props.fetchBooks(event.target.value)
+    }
 
 
   
@@ -43,4 +39,4 @@ handleChange = (event) => {
  
   
   
-  export default BookFilter
+  export default connect (null, {fetchBooks}) (BookFilter)
