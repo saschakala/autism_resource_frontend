@@ -8,26 +8,15 @@ import {fetchBookTags} from '../actions/fetchBookTags';
 import {fetchBooksByTag} from '../actions/fetchBooksByTag';
 
 class BookPage extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            tag: '',
-        }
-    }
 
     componentDidMount() {
         this.props.fetchBooks() 
         this.props.fetchBookTags()
     }
 
+
     handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-        this.props.fetchBooksByTag(this.state.tag)
-        this.setState({
-            tag: ''
-        })
+        this.props.fetchBooks(event.target.value)
     }
 
 
