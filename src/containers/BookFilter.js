@@ -12,7 +12,6 @@ class BookFilter extends React.Component {
         this.props.fetchBooks(event.target.value)
     }
 
-
   
     render() {
         

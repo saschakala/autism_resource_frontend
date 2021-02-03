@@ -14,11 +14,6 @@ class BookPage extends React.Component {
     }
 
 
-    // handleChange = (event) => {
-    //     this.props.fetchBooks(event.target.value)
-    // }
-
-
     render() {
         
         return (

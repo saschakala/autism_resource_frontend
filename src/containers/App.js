@@ -32,7 +32,7 @@ componentDidMount() {
           <Router history={history}>
             <Switch>
               <Route exact path='/books' component = { BookPage } />
-              <Route path='/articles' render={(routerProps) => <ArticlePage {...routerProps} articles={this.props.sources &&this.props.sources.filter(source => source.attributes.source_type === "Article")}/>}/>
+              <Route exact path='/articles' component = { ArticlePage }/>
               <Route exact path="/feedback" component = { FeedbackPage }/>
               <Route exact path="/" component = { HomePage }/>
             </Switch>
